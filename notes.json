@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Apuntes de React",
+    "contenido": "useState sirve para guardar estado...",
+    "etiquetas": ["react", "javascript"],
+    "favorita": true
+  },
+  {
+    "titulo": "Ideas proyecto",
+    "contenido": "Añadir filtro por categoría...",
+    "etiquetas": ["proyecto"],
+    "favorita": false
+  }
+]
