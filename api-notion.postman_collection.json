@@ -1,0 +1,183 @@
+{
+  "info": {
+    "_postman_id": "6fb7e8a0-1cb9-4a1e-8c66-5c3d0f85d2d1",
+    "name": "API Notion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Get all users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/notion/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "users"]
+        }
+      }
+    },
+    {
+      "name": "POST - Register user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "user", "value": "martina", "type": "text" },
+            { "key": "password", "value": "123456", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/notion/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "users"]
+        }
+      }
+    },
+    {
+      "name": "POST - Login user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "user", "value": "martina", "type": "text" },
+            { "key": "password", "value": "123456", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/notion/users/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "users", "login"]
+        }
+      }
+    },
+    {
+      "name": "POST - Register user by alternate route",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "user", "value": "martina", "type": "text" },
+            { "key": "password", "value": "123456", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/notion/users/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "users", "register"]
+        }
+      }
+    },
+    {
+      "name": "GET - Get all notes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/notion/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "notes"]
+        }
+      }
+    },
+    {
+      "name": "POST - Create note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "title", "value": "Primera nota", "type": "text" },
+            { "key": "content", "value": "Contenido de ejemplo", "type": "text" },
+            { "key": "favorite", "value": "true", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/notion/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "notes"]
+        }
+      }
+    },
+    {
+      "name": "PUT - Update note by ObjectId",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "title", "value": "Nota editada", "type": "text" },
+            { "key": "content", "value": "Contenido actualizado", "type": "text" },
+            { "key": "favorite", "value": "false", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/notion/notes/id/507f1f77bcf86cd799439011",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "notes", "id", "507f1f77bcf86cd799439011"]
+        }
+      }
+    },
+    {
+      "name": "DELETE - Delete note by ObjectId",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/notion/notes/id/507f1f77bcf86cd799439011",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["notion", "notes", "id", "507f1f77bcf86cd799439011"]
+        }
+      }
+    }
+  ]
+}

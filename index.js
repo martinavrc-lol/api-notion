@@ -9,6 +9,7 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const { router } = require('./router')
+const { middleware404, middleware500 } = require('./middlewares')
 
 const connect = async ()=>{
     await mongoose.connect (MONGO_URI)
@@ -26,6 +27,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 
 app.use('/notion' , router)
+
+app.use(middleware404)
+app.use(middleware500)
 
 
 app.listen(PORT , ()=> console.log(`Connected to localhost:${PORT}`))

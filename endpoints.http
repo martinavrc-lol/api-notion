@@ -1,0 +1,41 @@
+# API Notion
+# Base URL: http://localhost:3000/notion
+
+### GET - Obtener todos los usuarios
+GET http://localhost:3000/notion/users
+
+### POST - Registrar usuario
+POST http://localhost:3000/notion/users
+Content-Type: application/x-www-form-urlencoded
+
+user=martina&password=123456
+
+### POST - Login de usuario
+POST http://localhost:3000/notion/users/login
+Content-Type: application/x-www-form-urlencoded
+
+user=martina&password=123456
+
+### POST - Registrar usuario por ruta alternativa
+POST http://localhost:3000/notion/users/register
+Content-Type: application/x-www-form-urlencoded
+
+user=martina&password=123456
+
+### GET - Obtener todas las notas
+GET http://localhost:3000/notion/notes
+
+### POST - Crear nota
+POST http://localhost:3000/notion/notes
+Content-Type: application/x-www-form-urlencoded
+
+title=Primera nota&content=Contenido de ejemplo&favorite=true
+
+### PUT - Actualizar nota por id
+PUT http://localhost:3000/notion/notes/id/507f1f77bcf86cd799439011
+Content-Type: application/x-www-form-urlencoded
+
+title=Nota editada&content=Contenido actualizado&favorite=false
+
+### DELETE - Eliminar nota por id
+DELETE http://localhost:3000/notion/notes/id/507f1f77bcf86cd799439011
